@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Year 8 Maths — Algebra Terminology</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #f8f7f4;
+    --surface: #ffffff;
+    --border: #e8e5df;
+    --text-primary: #1a1917;
+    --text-secondary: #6b6760;
+    --text-muted: #9c9890;
+    --purple: #534AB7;
+    --purple-light: #EEEDFE;
+    --teal: #0F6E56;
+    --teal-light: #E1F5EE;
+    --coral: #993C1D;
+    --coral-light: #FAECE7;
+    --amber: #854F0B;
+    --amber-light: #FAEEDA;
+    --green: #3B6D11;
+    --green-light: #EAF3DE;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text-primary);
+    font-size: 15px;
+    line-height: 1.7;
+    padding: 2rem 1rem 4rem;
+  }
+
+  .page { max-width: 720px; margin: 0 auto; }
+
+  /* Teacher banner */
+  .teacher-banner {
+    background: var(--amber-light);
+    border: 1px solid #FAC775;
+    border-radius: 10px;
+    padding: .875rem 1.25rem;
+    margin-bottom: 2rem;
+    font-size: 13px;
+    color: var(--amber);
+    line-height: 1.6;
+  }
+  .teacher-banner strong { font-weight: 600; }
+
+  /* LISC block */
+  .lisc {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .lisc-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .07em;
+    color: var(--text-muted);
+    margin-bottom: .4rem;
+  }
+  .lisc-intention {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .sc-list { list-style: none; }
+  .sc-list li {
+    font-size: 14px;
+    color: var(--text-secondary);
+    padding: .3rem 0 .3rem 1.5rem;
+    position: relative;
+    line-height: 1.6;
+  }
+  .sc-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 11px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border: 1.5px solid var(--purple);
+  }
+
+  /* Section */
+  .section { margin-bottom: 2.5rem; }
+  .section-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+  }
+  .time-pill {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-muted);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 3px 12px;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+  }
+  .section-title {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    color: var(--text-muted);
+  }
+
+  /* Hook card */
+  .hook-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+  .hook-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 1.1rem 1.25rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--purple-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--purple);
+    flex-shrink: 0;
+  }
+  .profile-name { font-size: 15px; font-weight: 600; }
+  .profile-sub { font-size: 12px; color: var(--text-muted); }
+  .hook-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-bottom: 1px solid var(--border);
+  }
+  .stat {
+    padding: .875rem .75rem;
+    text-align: center;
+    border-right: 1px solid var(--border);
+  }
+  .stat:last-child { border-right: none; }
+  .stat-num { font-size: 20px; font-weight: 600; color: var(--text-primary); line-height: 1; }
+  .stat-label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: .04em; margin-top: 3px; }
+  .hook-body { padding: 1.1rem 1.25rem; }
+  .hook-body p { font-size: 14px; color: var(--text-secondary); margin-bottom: .75rem; line-height: 1.65; }
+  .hook-body p:last-child { margin-bottom: 0; }
+  .hl { color: var(--text-primary); font-weight: 600; }
+
+  /* Term grid */
+  .term-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+  }
+  .term-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1rem 1.1rem;
+  }
+  .term-name {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    margin-bottom: 6px;
+  }
+  .term-def { font-size: 13px; color: var(--text-secondary); line-height: 1.55; margin-bottom: 8px; }
+  .term-eg {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 6px;
+    display: inline-block;
+  }
+  .c-purple { color: var(--purple); }
+  .c-teal { color: var(--teal); }
+  .c-coral { color: var(--coral); }
+  .c-amber { color: var(--amber); }
+  .eg-purple { background: var(--purple-light); color: var(--purple); }
+  .eg-teal { background: var(--teal-light); color: var(--teal); }
+  .eg-coral { background: var(--coral-light); color: var(--coral); }
+  .eg-amber { background: var(--amber-light); color: var(--amber); }
+
+  /* Worked example */
+  .worked {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+  .worked-title { font-size: 14px; font-weight: 600; color: var(--text-primary); margin-bottom: .875rem; }
+  .expr-display {
+    font-family: 'DM Mono', monospace;
+    font-size: 26px;
+    font-weight: 500;
+    text-align: center;
+    padding: 1rem;
+    background: var(--bg);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    letter-spacing: .03em;
+  }
+  .ann-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-bottom: 1rem;
+  }
+  .ann {
+    text-align: center;
+    padding: .625rem .25rem;
+    background: var(--bg);
+    border-radius: 8px;
+  }
+  .ann-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    margin-bottom: 3px;
+  }
+  .ann-val { font-family: 'DM Mono', monospace; font-size: 13px; color: var(--text-primary); }
+  .step-list { list-style: none; }
+  .step-list li {
+    display: flex;
+    gap: 12px;
+    margin-bottom: .625rem;
+    align-items: flex-start;
+  }
+  .step-dot {
+    min-width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-top: 3px;
+    flex-shrink: 0;
+  }
+  .step-txt { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+  .step-txt strong { color: var(--text-primary); font-weight: 600; }
+
+  /* Practice */
+  .practice {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 1.25rem;
+  }
+  .practice-header {
+    padding: .75rem 1.25rem;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .practice-header span { font-size: 13px; font-weight: 600; color: var(--text-secondary); }
+  .pq { padding: 1rem 1.25rem; border-bottom: 1px solid var(--border); }
+  .pq:last-child { border-bottom: none; }
+  .pq-num { font-size: 11px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: .05em; margin-bottom: .4rem; }
+  .pq-text { font-size: 14px; color: var(--text-primary); margin-bottom: .75rem; line-height: 1.6; }
+  .pq-expr {
+    font-family: 'DM Mono', monospace;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    padding: .75rem;
+    background: var(--bg);
+    border-radius: 8px;
+    margin-bottom: .75rem;
+  }
+  .pq-sub { font-size: 13px; color: var(--text-secondary); margin-bottom: .75rem; }
+  .reveal-btn {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 5px 14px;
+    cursor: pointer;
+    transition: background .15s, color .15s;
+  }
+  .reveal-btn:hover { background: var(--border); color: var(--text-primary); }
+  .answer {
+    display: none;
+    margin-top: .875rem;
+    background: var(--green-light);
+    border: 1px solid #C0DD97;
+    border-radius: 8px;
+    padding: .875rem 1rem;
+    font-size: 13px;
+    color: var(--green);
+    line-height: 1.65;
+  }
+  .answer.visible { display: block; }
+  .answer strong { font-weight: 600; color: var(--text-primary); }
+
+  /* Exit ticket */
+  .exit {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+  .exit-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+  }
+  .exit-q { font-size: 14px; color: var(--text-primary); margin-bottom: .75rem; line-height: 1.6; }
+  .exit-note { font-size: 12px; color: var(--text-muted); margin-top: 1rem; font-style: italic; border-top: 1px solid var(--border); padding-top: .875rem; }
+
+  @media (max-width: 520px) {
+    .term-grid { grid-template-columns: 1fr; }
+    .ann-grid { grid-template-columns: repeat(2, 1fr); }
+    .hook-stats { grid-template-columns: repeat(3, 1fr); }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="teacher-banner">
+    <strong>Teacher note:</strong> This page is designed for students. Paste it into OneNote or open directly in a browser from your OneNote page. "Show answer" buttons are interactive. Estimated times appear at each section. Exit ticket can be replicated in Microsoft Forms and embedded below the final section.
+  </div>
+
+  <div class="lisc">
+    <div class="lisc-label">Learning intention</div>
+    <div class="lisc-intention">We are learning to identify and use the language of algebra.</div>
+    <div class="lisc-label">By the end of this lesson you will be able to:</div>
+    <ul class="sc-list">
+      <li>identify the pronumeral, coefficient, constant term, and number of terms in an algebraic expression</li>
+      <li>explain what a pronumeral represents in a real-world situation</li>
+      <li>write a simple algebraic expression from a written description</li>
+    </ul>
+  </div>
+
+  <!-- HOOK -->
+  <div class="section">
+    <div class="section-meta">
+      <span class="time-pill">0 – 5 min</span>
+      <span class="section-title">The hook</span>
+    </div>
+    <div class="hook-card">
+      <div class="hook-profile">
+        <div class="avatar">JK</div>
+        <div>
+          <div class="profile-name">Jordan Kim</div>
+          <div class="profile-sub">Content creator · Gaming and lifestyle</div>
+        </div>
+      </div>
+      <div class="hook-stats">
+        <div class="stat"><div class="stat-num">84K</div><div class="stat-label">Followers</div></div>
+        <div class="stat"><div class="stat-num">$3</div><div class="stat-label">Per 1K views</div></div>
+        <div class="stat"><div class="stat-num">$150</div><div class="stat-label">Per sponsorship</div></div>
+      </div>
+      <div class="hook-body">
+        <p>Jordan is a Year 8 student who started posting gaming videos last year. The channel has grown to 84,000 followers. Jordan earns <span class="hl">$3 for every 1,000 views</span> and <span class="hl">$150 for each sponsored post</span>.</p>
+        <p>Jordan wants to know: <span class="hl">how much could the channel earn this month?</span> The problem is — views and sponsorships change every month. They are not fixed numbers. They are unknowns.</p>
+        <p>This is exactly why algebra exists. When a value is unknown or changes, we use a letter to represent it. Those letters have names — and so do all the other parts of an algebraic expression. Today you learn those names.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TERMINOLOGY -->
+  <div class="section">
+    <div class="section-meta">
+      <span class="time-pill">5 – 20 min</span>
+      <span class="section-title">Terminology — the four building blocks</span>
+    </div>
+
+    <div class="term-grid">
+      <div class="term-card">
+        <div class="term-name c-purple">Pronumeral</div>
+        <div class="term-def">A letter that stands in for a number that is unknown or can change. It is the variable.</div>
+        <span class="term-eg eg-purple">v = view-thousands</span>
+      </div>
+      <div class="term-card">
+        <div class="term-name c-teal">Coefficient</div>
+        <div class="term-def">The number multiplied by a pronumeral. It tells you the rate — how much you earn per unit.</div>
+        <span class="term-eg eg-teal">3 in 3v means $3 per 1K views</span>
+      </div>
+      <div class="term-card">
+        <div class="term-name c-coral">Constant term</div>
+        <div class="term-def">A fixed number in an expression. It does not change, no matter what the pronumerals equal.</div>
+        <span class="term-eg eg-coral">50 — a fixed monthly bonus</span>
+      </div>
+      <div class="term-card">
+        <div class="term-name c-amber">Term</div>
+        <div class="term-def">A single part of an expression — a number, a pronumeral, or both multiplied together.</div>
+        <span class="term-eg eg-amber">3v is one term · 50 is one term</span>
+      </div>
+    </div>
+
+    <div class="worked">
+      <div class="worked-title">Jordan's monthly earnings expression — labelled</div>
+      <div class="expr-display">
+        <span class="c-purple">3v</span> + <span class="c-purple">150s</span> + <span class="c-coral">50</span>
+      </div>
+      <div class="ann-grid">
+        <div class="ann"><div class="ann-label c-purple">Pronumerals</div><div class="ann-val">v and s</div></div>
+        <div class="ann"><div class="ann-label c-teal">Coefficients</div><div class="ann-val">3 and 150</div></div>
+        <div class="ann"><div class="ann-label c-coral">Constant</div><div class="ann-val">50</div></div>
+        <div class="ann"><div class="ann-label c-amber">No. of terms</div><div class="ann-val">3</div></div>
+      </div>
+      <ul class="step-list">
+        <li><div class="step-dot">v</div><div class="step-txt"><strong>v</strong> = view-thousands — it changes each month, so it is a pronumeral</div></li>
+        <li><div class="step-dot">s</div><div class="step-txt"><strong>s</strong> = number of sponsorships — also unknown, also a pronumeral</div></li>
+        <li><div class="step-dot">3</div><div class="step-txt"><strong>3</strong> is the coefficient of v — Jordan earns $3 per view-thousand, so v is multiplied by 3</div></li>
+        <li><div class="step-dot">150</div><div class="step-txt"><strong>150</strong> is the coefficient of s — Jordan earns $150 per sponsorship</div></li>
+        <li><div class="step-dot">50</div><div class="step-txt"><strong>50</strong> is the constant — a fixed monthly platform bonus that never changes</div></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- GUIDED PRACTICE -->
+  <div class="section">
+    <div class="section-meta">
+      <span class="time-pill">20 – 35 min</span>
+      <span class="section-title">Guided practice — work through these with your teacher</span>
+    </div>
+
+    <div class="practice">
+      <div class="practice-header"><span>Questions 1 – 3</span></div>
+
+      <div class="pq">
+        <div class="pq-num">Q1</div>
+        <div class="pq-text">A rival creator Alex earns money differently. Their expression is:</div>
+        <div class="pq-expr"><span class="c-purple">5v</span> + <span class="c-purple">200s</span></div>
+        <div class="pq-sub">Write down: the pronumerals, the coefficients, and the number of terms.</div>
+        <button class="reveal-btn" onclick="toggleAnswer(this)">Show answer</button>
+        <div class="answer"><strong>Pronumerals:</strong> v and s &nbsp;·&nbsp; <strong>Coefficients:</strong> 5 and 200 &nbsp;·&nbsp; <strong>Number of terms:</strong> 2 &nbsp;·&nbsp; <strong>No constant term</strong> — Alex has no fixed monthly income, only variable earnings. Notice the expression has fewer terms than Jordan's.</div>
+      </div>
+
+      <div class="pq">
+        <div class="pq-num">Q2</div>
+        <div class="pq-text">Jordan adds merchandise sales. The new expression is:</div>
+        <div class="pq-expr"><span class="c-purple">3v</span> + <span class="c-purple">150s</span> + <span class="c-purple">12m</span> + <span class="c-coral">50</span></div>
+        <div class="pq-sub">What does m represent? What is its coefficient? How many terms does the expression have now?</div>
+        <button class="reveal-btn" onclick="toggleAnswer(this)">Show answer</button>
+        <div class="answer"><strong>m</strong> represents the number of merchandise items sold. <strong>Coefficient of m:</strong> 12 — Jordan earns $12 per item sold. <strong>Number of terms:</strong> 4 — three variable terms plus the constant 50.</div>
+      </div>
+
+      <div class="pq">
+        <div class="pq-num">Q3</div>
+        <div class="pq-text">Which expression has a higher earning rate per view-thousand — Jordan's <strong>3v + 150s + 50</strong> or Alex's <strong>5v + 200s</strong>? How can you tell just by looking at the expression, without substituting any values?</div>
+        <button class="reveal-btn" onclick="toggleAnswer(this)">Show answer</button>
+        <div class="answer"><strong>Alex earns more per view-thousand.</strong> The coefficient of v in Alex's expression is 5, compared to Jordan's 3. The coefficient tells you the rate directly — you don't need to know the actual number of views. This is one reason algebraic expressions are useful: you can compare rates at a glance.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INDEPENDENT PRACTICE -->
+  <div class="section">
+    <div class="section-meta">
+      <span class="time-pill">35 – 50 min</span>
+      <span class="section-title">Independent practice — try these on your own</span>
+    </div>
+
+    <div class="practice">
+      <div class="practice-header"><span>Questions 4 – 6 — increasing challenge</span></div>
+
+      <div class="pq">
+        <div class="pq-num">Q4</div>
+        <div class="pq-text">Identify the coefficient of each pronumeral, the constant term, and the number of terms in this expression:</div>
+        <div class="pq-expr">7x + 3y − 4</div>
+        <button class="reveal-btn" onclick="toggleAnswer(this)">Show answer</button>
+        <div class="answer"><strong>Pronumerals:</strong> x and y &nbsp;·&nbsp; <strong>Coefficient of x:</strong> 7 &nbsp;·&nbsp; <strong>Coefficient of y:</strong> 3 &nbsp;·&nbsp; <strong>Constant term:</strong> −4 &nbsp;·&nbsp; <strong>Number of terms:</strong> 3. Note: the constant term is negative. Constants can be positive or negative.</div>
+      </div>
+
+      <div class="pq">
+        <div class="pq-num">Q5</div>
+        <div class="pq-text">A gaming streamer earns $8 for every 1,000 views and $250 per sponsorship. They also pay $30 per month for streaming software.</div>
+        <div class="pq-sub">Write an algebraic expression for their monthly profit. Define your pronumerals clearly before you write the expression.</div>
+        <button class="reveal-btn" onclick="toggleAnswer(this)">Show answer</button>
+        <div class="answer"><strong>Let v = view-thousands, s = number of sponsorships</strong><br><br>Expression: <strong>8v + 250s − 30</strong><br><br>The −30 is a constant term representing the fixed monthly software cost. Because it is a cost and not income, it is subtracted. This is your first example of algebra modelling a real financial situation — income minus expenses.</div>
+      </div>
+
+      <div class="pq">
+        <div class="pq-num">Q6 — Think deeper</div>
+        <div class="pq-text">Two creators compare their monthly earnings expressions:<br><br><strong>Creator A:</strong> 4v + 100s + 80 &nbsp;&nbsp;&nbsp; <strong>Creator B:</strong> 6v + 80s</div>
+        <div class="pq-sub">Creator A says they will always earn more because they have three terms. Creator B disagrees. Who is right? Explain your thinking — you do not need to substitute values to give a strong answer.</div>
+        <button class="reveal-btn" onclick="toggleAnswer(this)">Show answer</button>
+        <div class="answer"><strong>Neither is always right — it depends on the values of v and s.</strong><br><br>If views are very high, Creator B earns more per view-thousand (coefficient 6 vs 4). If sponsorships are high, Creator A earns more per sponsorship (coefficient 100 vs 80) and also has the $80 constant income. Having more terms does not mean a higher value — it depends on what the pronumerals equal. This is the key insight: expressions describe relationships, not fixed amounts.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXIT TICKET -->
+  <div class="section">
+    <div class="section-meta">
+      <span class="time-pill">50 – 60 min</span>
+      <span class="section-title">Exit ticket</span>
+    </div>
+    <div class="exit">
+      <div class="exit-label">3 questions · 3 minutes · not graded</div>
+      <div class="exit-q"><strong>1.</strong> In the expression 9p + 4q − 15, write down the coefficient of q and the constant term.</div>
+      <div class="exit-q"><strong>2.</strong> A food delivery driver earns $6 per delivery and receives a $20 daily bonus. Write an algebraic expression for their daily earnings. Define your pronumeral.</div>
+      <div class="exit-q"><strong>3.</strong> In one sentence: explain what a pronumeral is and why it is useful.</div>
+      <div class="exit-note">Teacher: replicate these three questions in Microsoft Forms as a Text quiz and embed the link below this section in OneNote. Responses are not graded — they tell you which success criteria students have not yet met before the next lesson. Exit ticket data takes 5 minutes to review and removes guesswork from lesson planning.</div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function toggleAnswer(btn) {
+    const ans = btn.nextElementSibling;
+    const showing = ans.classList.contains('visible');
+    ans.classList.toggle('visible');
+    btn.textContent = showing ? 'Show answer' : 'Hide answer';
+  }
+</script>
+</body>
+</html>
