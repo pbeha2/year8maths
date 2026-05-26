@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jordan Kim — Character Asset</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Instrument Sans',sans-serif;background:#0d0f14;color:#f0f2f8;padding:2rem;min-height:100vh}
+h1{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;margin-bottom:.25rem}
+.sub{font-size:13px;color:#8892aa;margin-bottom:2.5rem}
+.section-label{font-family:'Syne',sans-serif;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#4a5268;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:1px solid #2a2f3d}
+.sizes{display:flex;align-items:flex-end;gap:2rem;flex-wrap:wrap;margin-bottom:3rem}
+.size-item{display:flex;flex-direction:column;align-items:center;gap:.75rem}
+.size-label{font-size:11px;color:#4a5268;text-transform:uppercase;letter-spacing:.06em}
+.usage-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem;margin-bottom:3rem}
+.usage-card{background:#161920;border:1px solid #2a2f3d;border-radius:12px;overflow:hidden}
+.usage-header{padding:.875rem 1.1rem;border-bottom:1px solid #2a2f3d;font-size:13px;font-weight:600;color:#8892aa}
+.usage-body{padding:1.1rem;display:flex;align-items:center;gap:1rem}
+.usage-body p{font-size:13px;color:#8892aa;line-height:1.6}
+.usage-body p strong{color:#f0f2f8;font-weight:600}
+.prompt-box{background:#161920;border:1px solid #2a2f3d;border-radius:12px;padding:1.5rem;margin-bottom:1rem}
+.prompt-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:#4a5268;margin-bottom:.75rem}
+.prompt-text{font-family:monospace;font-size:12px;color:#7B6EF6;line-height:1.7;background:#0d0f14;border:1px solid #2a2f3d;border-radius:8px;padding:1rem;white-space:pre-wrap}
+.copy-btn{margin-top:.75rem;font-family:'Instrument Sans',sans-serif;font-size:12px;font-weight:600;padding:.4rem 1rem;border-radius:8px;border:1px solid #2a2f3d;background:#1e2230;color:#8892aa;cursor:pointer;transition:all .15s}
+.copy-btn:hover{background:#2a2f3d;color:#f0f2f8}
+.tools-row{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1rem}
+.tool-pill{font-size:12px;font-weight:500;padding:.375rem 1rem;border-radius:20px;border:1px solid #2a2f3d;background:#1e2230;color:#8892aa}
+.tool-pill.recommended{border-color:#7B6EF6;color:#7B6EF6;background:#2d2860}
+.note{font-size:12px;color:#4a5268;margin-top:1rem;line-height:1.6}
+.note strong{color:#8892aa;font-weight:500}
+</style>
+</head>
+<body>
+
+<h1>Jordan Kim</h1>
+<div class="sub">Character asset · Year 8 Algebra Unit · Use across all lessons and resources</div>
+
+<div class="section-label">Character illustration — all sizes</div>
+<div class="sizes">
+
+  <!-- LARGE 200px -->
+  <div class="size-item">
+    <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <clipPath id="circle200"><circle cx="100" cy="100" r="100"/></clipPath>
+        <linearGradient id="bg200" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#1a1635"/>
+          <stop offset="100%" stop-color="#0d2a22"/>
+        </linearGradient>
+        <linearGradient id="skin200" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#D4956A"/>
+          <stop offset="100%" stop-color="#B87A52"/>
+        </linearGradient>
+        <linearGradient id="hoodie200" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#2d2860"/>
+          <stop offset="100%" stop-color="#1a1840"/>
+        </linearGradient>
+      </defs>
+      <g clip-path="url(#circle200)">
+        <!-- background -->
+        <rect width="200" height="200" fill="url(#bg200)"/>
+        <!-- subtle grid lines -->
+        <line x1="0" y1="50" x2="200" y2="50" stroke="#7B6EF6" stroke-opacity=".08" stroke-width="1"/>
+        <line x1="0" y1="100" x2="200" y2="100" stroke="#7B6EF6" stroke-opacity=".08" stroke-width="1"/>
+        <line x1="0" y1="150" x2="200" y2="150" stroke="#7B6EF6" stroke-opacity=".08" stroke-width="1"/>
+        <line x1="50" y1="0" x2="50" y2="200" stroke="#7B6EF6" stroke-opacity=".08" stroke-width="1"/>
+        <line x1="100" y1="0" x2="100" y2="200" stroke="#7B6EF6" stroke-opacity=".08" stroke-width="1"/>
+        <line x1="150" y1="0" x2="150" y2="200" stroke="#7B6EF6" stroke-opacity=".08" stroke-width="1"/>
+        <!-- glow -->
+        <circle cx="100" cy="80" r="55" fill="#7B6EF6" opacity=".07"/>
+        <!-- BODY / HOODIE -->
+        <rect x="30" y="148" width="140" height="80" rx="28" fill="url(#hoodie200)"/>
+        <!-- hoodie pocket line -->
+        <path d="M72 165 Q100 172 128 165" stroke="#7B6EF6" stroke-width="1.5" fill="none" opacity=".5"/>
+        <!-- hoodie drawstrings -->
+        <line x1="90" y1="158" x2="86" y2="178" stroke="#8892aa" stroke-width="1" opacity=".4"/>
+        <line x1="110" y1="158" x2="114" y2="178" stroke="#8892aa" stroke-width="1" opacity=".4"/>
+        <!-- NECK -->
+        <rect x="88" y="136" width="24" height="20" rx="6" fill="url(#skin200)"/>
+        <!-- HEADPHONES band over head -->
+        <path d="M58 90 Q100 44 142 90" stroke="#2DD4AA" stroke-width="5" fill="none" stroke-linecap="round" opacity=".9"/>
+        <!-- headphone cups -->
+        <rect x="52" y="88" width="14" height="20" rx="6" fill="#2DD4AA" opacity=".9"/>
+        <rect x="134" y="88" width="14" height="20" rx="6" fill="#2DD4AA" opacity=".9"/>
+        <rect x="55" y="91" width="8" height="14" rx="4" fill="#0d3028"/>
+        <rect x="137" y="91" width="8" height="14" rx="4" fill="#0d3028"/>
+        <!-- HEAD -->
+        <ellipse cx="100" cy="100" rx="42" ry="46" fill="url(#skin200)"/>
+        <!-- HAIR -->
+        <path d="M60 92 Q62 58 100 54 Q138 58 140 92 Q138 72 128 64 Q114 52 100 52 Q86 52 72 64 Q62 72 60 92Z" fill="#1a1208"/>
+        <!-- hair top detail -->
+        <path d="M78 60 Q100 48 122 60 Q110 54 100 53 Q90 54 78 60Z" fill="#2a1e0a" opacity=".7"/>
+        <!-- EYES -->
+        <!-- eye whites -->
+        <ellipse cx="87" cy="101" rx="9" ry="7" fill="#f8f4ee"/>
+        <ellipse cx="113" cy="101" rx="9" ry="7" fill="#f8f4ee"/>
+        <!-- iris -->
+        <circle cx="88" cy="102" r="5.5" fill="#3d2e1a"/>
+        <circle cx="114" cy="102" r="5.5" fill="#3d2e1a"/>
+        <!-- pupil -->
+        <circle cx="88.5" cy="102" r="3" fill="#0d0a05"/>
+        <circle cx="114.5" cy="102" r="3" fill="#0d0a05"/>
+        <!-- eye shine -->
+        <circle cx="90" cy="100" r="1.5" fill="white" opacity=".9"/>
+        <circle cx="116" cy="100" r="1.5" fill="white" opacity=".9"/>
+        <!-- eyebrows -->
+        <path d="M79 94 Q87 91 95 93" stroke="#1a1208" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <path d="M105 93 Q113 91 121 94" stroke="#1a1208" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <!-- NOSE -->
+        <path d="M97 108 Q100 114 103 108" stroke="#B87A52" stroke-width="1.5" fill="none" stroke-linecap="round" opacity=".7"/>
+        <!-- SMILE -->
+        <path d="M88 119 Q100 128 112 119" stroke="#8B5E3C" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <!-- cheek blush -->
+        <ellipse cx="80" cy="114" rx="8" ry="5" fill="#E8907A" opacity=".2"/>
+        <ellipse cx="120" cy="114" rx="8" ry="5" fill="#E8907A" opacity=".2"/>
+        <!-- PHONE in hand area -->
+        <rect x="128" y="152" width="22" height="36" rx="4" fill="#1e2230" stroke="#7B6EF6" stroke-width="1.5" opacity=".85"/>
+        <rect x="131" y="156" width="16" height="24" rx="2" fill="#2d2860" opacity=".8"/>
+        <!-- phone screen glow -->
+        <rect x="131" y="156" width="16" height="24" rx="2" fill="#7B6EF6" opacity=".15"/>
+        <!-- social media icon on phone -->
+        <text x="139" y="171" text-anchor="middle" fill="#7B6EF6" font-size="10" opacity=".8">▶</text>
+        <!-- name tag -->
+        <rect x="50" y="178" width="100" height="22" rx="6" fill="#7B6EF6" opacity=".15" stroke="#7B6EF6" stroke-width="1" stroke-opacity=".4"/>
+        <text x="100" y="193" text-anchor="middle" fill="#7B6EF6" font-family="'Syne',sans-serif" font-size="9" font-weight="700" letter-spacing="1">JORDAN KIM</text>
+      </g>
+      <!-- border ring -->
+      <circle cx="100" cy="100" r="98" fill="none" stroke="#7B6EF6" stroke-width="2" opacity=".3"/>
+      <circle cx="100" cy="100" r="100" fill="none" stroke="#2a2f3d" stroke-width="1"/>
+    </svg>
+    <div class="size-label">200px — lesson pages</div>
+  </div>
+
+  <!-- MEDIUM 100px -->
+  <div class="size-item">
+    <svg width="100" height="100" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <clipPath id="circle100"><circle cx="100" cy="100" r="100"/></clipPath>
+        <linearGradient id="bg100" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#1a1635"/><stop offset="100%" stop-color="#0d2a22"/>
+        </linearGradient>
+        <linearGradient id="skin100" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#D4956A"/><stop offset="100%" stop-color="#B87A52"/>
+        </linearGradient>
+        <linearGradient id="hoodie100" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#2d2860"/><stop offset="100%" stop-color="#1a1840"/>
+        </linearGradient>
+      </defs>
+      <g clip-path="url(#circle100)">
+        <rect width="200" height="200" fill="url(#bg100)"/>
+        <circle cx="100" cy="80" r="55" fill="#7B6EF6" opacity=".07"/>
+        <rect x="30" y="148" width="140" height="80" rx="28" fill="url(#hoodie100)"/>
+        <rect x="88" y="136" width="24" height="20" rx="6" fill="url(#skin100)"/>
+        <path d="M58 90 Q100 44 142 90" stroke="#2DD4AA" stroke-width="5" fill="none" stroke-linecap="round" opacity=".9"/>
+        <rect x="52" y="88" width="14" height="20" rx="6" fill="#2DD4AA" opacity=".9"/>
+        <rect x="134" y="88" width="14" height="20" rx="6" fill="#2DD4AA" opacity=".9"/>
+        <rect x="55" y="91" width="8" height="14" rx="4" fill="#0d3028"/>
+        <rect x="137" y="91" width="8" height="14" rx="4" fill="#0d3028"/>
+        <ellipse cx="100" cy="100" rx="42" ry="46" fill="url(#skin100)"/>
+        <path d="M60 92 Q62 58 100 54 Q138 58 140 92 Q138 72 128 64 Q114 52 100 52 Q86 52 72 64 Q62 72 60 92Z" fill="#1a1208"/>
+        <ellipse cx="87" cy="101" rx="9" ry="7" fill="#f8f4ee"/>
+        <ellipse cx="113" cy="101" rx="9" ry="7" fill="#f8f4ee"/>
+        <circle cx="88" cy="102" r="5.5" fill="#3d2e1a"/>
+        <circle cx="114" cy="102" r="5.5" fill="#3d2e1a"/>
+        <circle cx="88.5" cy="102" r="3" fill="#0d0a05"/>
+        <circle cx="114.5" cy="102" r="3" fill="#0d0a05"/>
+        <circle cx="90" cy="100" r="1.5" fill="white" opacity=".9"/>
+        <circle cx="116" cy="100" r="1.5" fill="white" opacity=".9"/>
+        <path d="M79 94 Q87 91 95 93" stroke="#1a1208" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <path d="M105 93 Q113 91 121 94" stroke="#1a1208" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <path d="M97 108 Q100 114 103 108" stroke="#B87A52" stroke-width="1.5" fill="none" stroke-linecap="round" opacity=".7"/>
+        <path d="M88 119 Q100 128 112 119" stroke="#8B5E3C" stroke-width="2" fill="none" stroke-linecap="round"/>
+      </g>
+      <circle cx="100" cy="100" r="98" fill="none" stroke="#7B6EF6" stroke-width="2" opacity=".3"/>
+    </svg>
+    <div class="size-label">100px — quiz & survey</div>
+  </div>
+
+  <!-- SMALL 56px -->
+  <div class="size-item">
+    <svg width="56" height="56" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <clipPath id="circle56"><circle cx="100" cy="100" r="100"/></clipPath>
+        <linearGradient id="bg56" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#1a1635"/><stop offset="100%" stop-color="#0d2a22"/>
+        </linearGradient>
+        <linearGradient id="skin56" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#D4956A"/><stop offset="100%" stop-color="#B87A52"/>
+        </linearGradient>
+      </defs>
+      <g clip-path="url(#circle56)">
+        <rect width="200" height="200" fill="url(#bg56)"/>
+        <circle cx="100" cy="80" r="55" fill="#7B6EF6" opacity=".1"/>
+        <rect x="30" y="148" width="140" height="80" rx="28" fill="#2d2860"/>
+        <rect x="88" y="136" width="24" height="20" rx="6" fill="url(#skin56)"/>
+        <path d="M58 90 Q100 44 142 90" stroke="#2DD4AA" stroke-width="5" fill="none" stroke-linecap="round" opacity=".9"/>
+        <rect x="52" y="88" width="14" height="20" rx="6" fill="#2DD4AA" opacity=".9"/>
+        <rect x="134" y="88" width="14" height="20" rx="6" fill="#2DD4AA" opacity=".9"/>
+        <ellipse cx="100" cy="100" rx="42" ry="46" fill="url(#skin56)"/>
+        <path d="M60 92 Q62 58 100 54 Q138 58 140 92 Q138 72 128 64 Q114 52 100 52 Q86 52 72 64 Q62 72 60 92Z" fill="#1a1208"/>
+        <ellipse cx="87" cy="101" rx="9" ry="7" fill="#f8f4ee"/>
+        <ellipse cx="113" cy="101" rx="9" ry="7" fill="#f8f4ee"/>
+        <circle cx="88.5" cy="102" r="3" fill="#0d0a05"/>
+        <circle cx="114.5" cy="102" r="3" fill="#0d0a05"/>
+        <circle cx="90" cy="100" r="1.5" fill="white" opacity=".9"/>
+        <circle cx="116" cy="100" r="1.5" fill="white" opacity=".9"/>
+        <path d="M88 119 Q100 128 112 119" stroke="#8B5E3C" stroke-width="2" fill="none" stroke-linecap="round"/>
+      </g>
+      <circle cx="100" cy="100" r="98" fill="none" stroke="#7B6EF6" stroke-width="2" opacity=".3"/>
+    </svg>
+    <div class="size-label">56px — inline / chat bubble</div>
+  </div>
+
+</div>
+
+<!-- USAGE EXAMPLES -->
+<div class="section-label">How Jordan appears in lessons</div>
+<div class="usage-grid">
+
+  <div class="usage-card">
+    <div class="usage-header">Lesson hook — scenario intro</div>
+    <div class="usage-body">
+      <svg width="56" height="56" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="cu1"><circle cx="100" cy="100" r="100"/></clipPath><linearGradient id="bgu1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1a1635"/><stop offset="100%" stop-color="#0d2a22"/></linearGradient><linearGradient id="sku1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#D4956A"/><stop offset="100%" stop-color="#B87A52"/></linearGradient></defs><g clip-path="url(#cu1)"><rect width="200" height="200" fill="url(#bgu1)"/><circle cx="100" cy="80" r="55" fill="#7B6EF6" opacity=".1"/><rect x="30" y="148" width="140" height="80" rx="28" fill="#2d2860"/><rect x="88" y="136" width="24" height="20" rx="6" fill="url(#sku1)"/><path d="M58 90 Q100 44 142 90" stroke="#2DD4AA" stroke-width="5" fill="none" stroke-linecap="round" opacity=".9"/><rect x="52" y="88" width="14" height="20" rx="6" fill="#2DD4AA" opacity=".9"/><rect x="134" y="88" width="14" height="20" rx="6" fill="#2DD4AA" opacity=".9"/><ellipse cx="100" cy="100" rx="42" ry="46" fill="url(#sku1)"/><path d="M60 92 Q62 58 100 54 Q138 58 140 92 Q138 72 128 64 Q114 52 100 52 Q86 52 72 64 Q62 72 60 92Z" fill="#1a1208"/><ellipse cx="87" cy="101" rx="9" ry="7" fill="#f8f4ee"/><ellipse cx="113" cy="101" rx="9" ry="7" fill="#f8f4ee"/><circle cx="88.5" cy="102" r="3" fill="#0d0a05"/><circle cx="114.5" cy="102" r="3" fill="#0d0a05"/><circle cx="90" cy="100" r="1.5" fill="white" opacity=".9"/><circle cx="116" cy="100" r="1.5" fill="white" opacity=".9"/><path d="M88 119 Q100 128 112 119" stroke="#8B5E3C" stroke-width="2" fill="none" stroke-linecap="round"/></g><circle cx="100" cy="100" r="98" fill="none" stroke="#7B6EF6" stroke-width="2" opacity=".3"/></svg>
+      <p><strong>Jordan Kim</strong> — Content creator, 84K followers. Place this at the top of every lesson page to signal continuity. Students immediately know which scenario they're in.</p>
+    </div>
+  </div>
+
+  <div class="usage-card">
+    <div class="usage-header">Word problem context</div>
+    <div class="usage-body">
+      <svg width="56" height="56" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="cu2"><circle cx="100" cy="100" r="100"/></clipPath><linearGradient id="bgu2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1a1635"/><stop offset="100%" stop-color="#0d2a22"/></linearGradient><linearGradient id="sku2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#D4956A"/><stop offset="100%" stop-color="#B87A52"/></linearGradient></defs><g clip-path="url(#cu2)"><rect width="200" height="200" fill="url(#bgu2)"/><circle cx="100" cy="80" r="55" fill="#7B6EF6" opacity=".1"/><rect x="30" y="148" width="140" height="80" rx="28" fill="#2d2860"/><rect x="88" y="136" width="24" height="20" rx="6" fill="url(#sku2)"/><path d="M58 90 Q100 44 142 90" stroke="#2DD4AA" stroke-width="5" fill="none" stroke-linecap="round" opacity=".9"/><rect x="52" y="88" width="14" height="20" rx="6" fill="#2DD4AA" opacity=".9"/><rect x="134" y="88" width="14" height="20" rx="6" fill="#2DD4AA" opacity=".9"/><ellipse cx="100" cy="100" rx="42" ry="46" fill="url(#sku2)"/><path d="M60 92 Q62 58 100 54 Q138 58 140 92 Q138 72 128 64 Q114 52 100 52 Q86 52 72 64 Q62 72 60 92Z" fill="#1a1208"/><ellipse cx="87" cy="101" rx="9" ry="7" fill="#f8f4ee"/><ellipse cx="113" cy="101" rx="9" ry="7" fill="#f8f4ee"/><circle cx="88.5" cy="102" r="3" fill="#0d0a05"/><circle cx="114.5" cy="102" r="3" fill="#0d0a05"/><circle cx="90" cy="100" r="1.5" fill="white" opacity=".9"/><circle cx="116" cy="100" r="1.5" fill="white" opacity=".9"/><path d="M88 119 Q100 128 112 119" stroke="#8B5E3C" stroke-width="2" fill="none" stroke-linecap="round"/></g><circle cx="100" cy="100" r="98" fill="none" stroke="#7B6EF6" stroke-width="2" opacity=".3"/></svg>
+      <p>Embed next to any question that references Jordan. <strong>"Jordan earns $3 per view-thousand..."</strong> — the face next to the name makes it feel like a real person, not a textbook abstract.</p>
+    </div>
+  </div>
+
+  <div class="usage-card">
+    <div class="usage-header">Narrated player — profile strip</div>
+    <div class="usage-body">
+      <svg width="56" height="56" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="cu3"><circle cx="100" cy="100" r="100"/></clipPath><linearGradient id="bgu3" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1a1635"/><stop offset="100%" stop-color="#0d2a22"/></linearGradient><linearGradient id="sku3" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#D4956A"/><stop offset="100%" stop-color="#B87A52"/></linearGradient></defs><g clip-path="url(#cu3)"><rect width="200" height="200" fill="url(#bgu3)"/><circle cx="100" cy="80" r="55" fill="#7B6EF6" opacity=".1"/><rect x="30" y="148" width="140" height="80" rx="28" fill="#2d2860"/><rect x="88" y="136" width="24" height="20" rx="6" fill="url(#sku3)"/><path d="M58 90 Q100 44 142 90" stroke="#2DD4AA" stroke-width="5" fill="none" stroke-linecap="round" opacity=".9"/><rect x="52" y="88" width="14" height="20" rx="6" fill="#2DD4AA" opacity=".9"/><rect x="134" y="88" width="14" height="20" rx="6" fill="#2DD4AA" opacity=".9"/><ellipse cx="100" cy="100" rx="42" ry="46" fill="url(#sku3)"/><path d="M60 92 Q62 58 100 54 Q138 58 140 92 Q138 72 128 64 Q114 52 100 52 Q86 52 72 64 Q62 72 60 92Z" fill="#1a1208"/><ellipse cx="87" cy="101" rx="9" ry="7" fill="#f8f4ee"/><ellipse cx="113" cy="101" rx="9" ry="7" fill="#f8f4ee"/><circle cx="88.5" cy="102" r="3" fill="#0d0a05"/><circle cx="114.5" cy="102" r="3" fill="#0d0a05"/><circle cx="90" cy="100" r="1.5" fill="white" opacity=".9"/><circle cx="116" cy="100" r="1.5" fill="white" opacity=".9"/><path d="M88 119 Q100 128 112 119" stroke="#8B5E3C" stroke-width="2" fill="none" stroke-linecap="round"/></g><circle cx="100" cy="100" r="98" fill="none" stroke="#7B6EF6" stroke-width="2" opacity=".3"/></svg>
+      <p>Sits in the narrated lesson player on Slide 1 as part of the profile card. <strong>Consistent across all 10 lessons</strong> — students recognise the character immediately from Week 7 to the end of term.</p>
+    </div>
+  </div>
+
+  <div class="usage-card">
+    <div class="usage-header">Formative assessments</div>
+    <div class="usage-body">
+      <svg width="56" height="56" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="cu4"><circle cx="100" cy="100" r="100"/></clipPath><linearGradient id="bgu4" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1a1635"/><stop offset="100%" stop-color="#0d2a22"/></linearGradient><linearGradient id="sku4" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#D4956A"/><stop offset="100%" stop-color="#B87A52"/></linearGradient></defs><g clip-path="url(#cu4)"><rect width="200" height="200" fill="url(#bgu4)"/><circle cx="100" cy="80" r="55" fill="#7B6EF6" opacity=".1"/><rect x="30" y="148" width="140" height="80" rx="28" fill="#2d2860"/><rect x="88" y="136" width="24" height="20" rx="6" fill="url(#sku4)"/><path d="M58 90 Q100 44 142 90" stroke="#2DD4AA" stroke-width="5" fill="none" stroke-linecap="round" opacity=".9"/><rect x="52" y="88" width="14" height="20" rx="6" fill="#2DD4AA" opacity=".9"/><rect x="134" y="88" width="14" height="20" rx="6" fill="#2DD4AA" opacity=".9"/><ellipse cx="100" cy="100" rx="42" ry="46" fill="url(#sku4)"/><path d="M60 92 Q62 58 100 54 Q138 58 140 92 Q138 72 128 64 Q114 52 100 52 Q86 52 72 64 Q62 72 60 92Z" fill="#1a1208"/><ellipse cx="87" cy="101" rx="9" ry="7" fill="#f8f4ee"/><ellipse cx="113" cy="101" rx="9" ry="7" fill="#f8f4ee"/><circle cx="88.5" cy="102" r="3" fill="#0d0a05"/><circle cx="114.5" cy="102" r="3" fill="#0d0a05"/><circle cx="90" cy="100" r="1.5" fill="white" opacity=".9"/><circle cx="116" cy="100" r="1.5" fill="white" opacity=".9"/><path d="M88 119 Q100 128 112 119" stroke="#8B5E3C" stroke-width="2" fill="none" stroke-linecap="round"/></g><circle cx="100" cy="100" r="98" fill="none" stroke="#7B6EF6" stroke-width="2" opacity=".3"/></svg>
+      <p>Include Jordan's avatar in your Formative 1 and Formative 2 exam headers. Students who have been working with the Jordan scenario all term will feel more at ease — <strong>familiar context reduces assessment anxiety</strong>.</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- AI IMAGE PROMPT -->
+<div class="section-label">Want a photographic version? Use this prompt</div>
+<div class="prompt-box">
+  <div class="prompt-label">AI image generation prompt — copy and paste exactly</div>
+  <div class="prompt-text">Digital illustration portrait of a 13-year-old student named Jordan Kim, gender-neutral appearance, East Asian features, short slightly messy dark hair, warm medium skin tone, friendly confident expression with a slight smile, wearing a dark purple oversized hoodie, teal gaming headset resting around neck, holding a smartphone, social media creator aesthetic, circular avatar crop, clean graphic novel illustration style, flat bold colours, dark navy background with subtle purple glow, no text, no watermark, safe for school educational use, age-appropriate</div>
+  <button class="copy-btn" onclick="navigator.clipboard.writeText(document.querySelector('.prompt-text').textContent);this.textContent='Copied ✓';setTimeout(()=>this.textContent='Copy prompt',2000)">Copy prompt</button>
+</div>
+
+<div class="tools-row">
+  <div class="tool-pill recommended">Adobe Firefly (recommended — free with school Adobe licence)</div>
+  <div class="tool-pill">Canva AI (free tier available)</div>
+  <div class="tool-pill">ChatGPT image generation</div>
+  <div class="tool-pill">Microsoft Designer (free with O365)</div>
+</div>
+<div class="note"><strong>Privacy note:</strong> the prompt specifies an illustrated style, not a photograph of a real person. The character is fictional. No student likenesses are used. Safe to use in school resources without consent concerns. If using Microsoft Designer, it integrates directly with your O365 account and outputs can be saved to OneDrive.</div>
+
+</body>
+</html>
